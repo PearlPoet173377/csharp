@@ -5,7 +5,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace PearlPOet173377.Hometask_01
+namespace PearlPoet173377.Hometask_01
 {
     class Program
     {
