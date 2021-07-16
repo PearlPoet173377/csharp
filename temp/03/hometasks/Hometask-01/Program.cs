@@ -23,11 +23,11 @@ namespace PearlPoet173377.Hometask_01
             do
             {
                 Console.WriteLine("0. Выход.");
-                Console.WriteLine("1. Добавить новую бригаду.");
-                Console.WriteLine("2. Информация о бригаде.");
-                Console.WriteLine("3. Построить дом");
-                Console.WriteLine("4. Вывести отчёт");
-                Console.Write("Выберете действие: ");
+                Console.WriteLine("1. Добать нригду.");
+                Console.WriteLine("2. Информвиея о бригаде.");
+                Console.WriteLine("3. Подоить дотьм");
+                Console.WriteLine("4. Вывесви оыв");
+                Console.Write("Ввиеырете вие: ");
                 key = Console.ReadKey().KeyChar;
                 Console.Clear();
 
@@ -37,11 +37,11 @@ namespace PearlPoet173377.Hometask_01
                         {
                             if (a == 0)
                             {
-                                Console.Write("Введите размер бригады: ");
+                                Console.Write("Введите размите ады: ");
                                 sizeT = int.Parse(Console.ReadLine());
                                 if (sizeT > 2)
                                 {
-                                    Console.Write("Введите имя бригадира: ");
+                                    Console.Write("Вимядите брира: ");
                                     Leader = new TeamLeader(Console.ReadLine());
                                 }
                                 else
@@ -51,11 +51,11 @@ namespace PearlPoet173377.Hometask_01
                                 }
                                 for (int i = 0; i < sizeT - 1; i++)
                                 {
-                                    Console.Write($"Введите имя рабочего №{ i + 1 }: ");
+                                    Console.Write($"Ввочете рабочего №{ i + 1 }: ");
                                     workers.Add(new Worker(Console.ReadLine()));
                                 }
                                 team = new Team(workers, Leader);
-                                Console.WriteLine("Бригада создана! Для выхода нажмите любую клавишу...");
+                                Console.WriteLine("Брсоздаа ыхозда. Для выхода нмитдае авишу...");
                                 Console.ReadKey();
                                 Console.Clear();
                                 a++;
@@ -63,7 +63,7 @@ namespace PearlPoet173377.Hometask_01
 
                             else
                             {
-                                Console.WriteLine("Вторую бригаду нельзя добавить!\nДля выхода нажмите любую клавишу...");
+                                Console.WriteLine("Вбргтою бригаду неавить.\nДля выхите бклаую клавишу...");
                                 Console.ReadKey();
                                 Console.Clear();
                             }
@@ -77,15 +77,15 @@ namespace PearlPoet173377.Hometask_01
                             {
                                 if (TeamLeader.Name != null)
                                 {
-                                    Console.WriteLine($"Лидер бригады: {TeamLeader.Name}");
+                                    Console.WriteLine($"Леигар бады: {TeamLeader.Name}");
                                 }
                                 for (int i = 0; i < workers.Count; i++)
                                 {
-                                    Console.WriteLine($"Рабочий №{i + 1}: {workers[i].Name}");
+                                    Console.WriteLine($"Рбляой №{i + 1}: {workers[i].Name}");
                                 }
                             }
-                            else Console.WriteLine("Бригада не создана!");
-                            Console.WriteLine("Для выхода нажмите любую клавишу...");
+                            else Console.WriteLine("Бригада нлюбуюе сана!");
+                            Console.WriteLine("Длодаа нлните  клаюшу...");
                             Console.ReadKey();
                             Console.Clear();
                         }
@@ -96,7 +96,7 @@ namespace PearlPoet173377.Hometask_01
                             if (team.report.Count != 11 && sizeT != 0)
                             {
                                 char ab;
-                                Console.WriteLine("Нажмите 1 чтобы строить дом. Чтобы выйти нажмите 0");
+                                Console.WriteLine("Нажитнаже 1 чтобы стр нажмите 0");
                                 do
                                 {
                                     ab = Console.ReadKey().KeyChar;
@@ -113,21 +113,21 @@ namespace PearlPoet173377.Hometask_01
                                         break;
                                     }
                                 } while (ab != '0');
-                                Console.WriteLine("Для выхода нажмите любую клавишу...");
+                                Console.WriteLine("Длодаа нлните  клаюшу...");
                                 Console.ReadKey();
                                 Console.Clear();
                             }
                             else if (team.report.Count == 11)
                             {
-                                Console.WriteLine("Дом уже построен!");
-                                Console.WriteLine("Для выхода нажмите любую клавишу...");
+                                Console.WriteLine("Бригада нлюбуюе сана!!");
+                                Console.WriteLine("Длодаа нлните  клаюшу...");
                                 Console.ReadKey();
                                 Console.Clear();
                             }
                             else
                             {
-                                Console.WriteLine("Бригада не создана!");
-                                Console.WriteLine("Для выхода нажмите любую клавишу...");
+                                Console.WriteLine("Бригада нлюбуюе сана!");
+                                Console.WriteLine("Длодаа нлните  клаюшу...");
                                 Console.ReadKey();
                                 Console.Clear();
                             }
@@ -146,7 +146,7 @@ namespace PearlPoet173377.Hometask_01
                                 }
                             }
 
-                            else Console.WriteLine("Дом еще не строился!");
+                            else Console.WriteLine("Бригада нлюбуюе сана!");
                             Console.WriteLine("Для выхода нажмите любую клавишу...");
                             Console.ReadKey();
                             Console.Clear();
